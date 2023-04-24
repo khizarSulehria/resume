@@ -1,0 +1,47 @@
+.mainHome {
+    margin: 0 auto;
+}
+.bigHeading{
+    margin: 0px;
+    font-size: 70px;
+    font-weight: 600;
+    color: #ccd6f6;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    line-height: 1.1;
+}
+
+.secondBigHeading{
+    color: #8892b0;
+}
+.smallHeading *{
+    margin: 14px 0px 30px 4px;
+    color: #64ffda;
+    font-family:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-weight: 400;
+}
+
+.mainHome p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+    color: #64ffda;
+}
+
+.emailLink {
+    margin-top: 50px;
+}
+.emailLink > a {
+    
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  
+}
+
