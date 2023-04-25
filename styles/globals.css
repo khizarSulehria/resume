@@ -80,3 +80,11 @@ body {
     user-select: auto !important;
 
 }
+
+.innerContent{
+  display: flex;
+  gap: 60px;
+}
+.innerContent div{
+  width: 50%;
+}
