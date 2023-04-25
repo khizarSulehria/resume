@@ -4,7 +4,7 @@ import Navbar from '@/Components/Navbar';
 import { useEffect, useState } from 'react';
 
 export default function About(){
-    const [profile, setProfile] = useState({});
+    const [profile, setProfile] :any = useState({});
 
 
 
@@ -64,7 +64,7 @@ export default function About(){
                         <div className='innerContent'>
                             <div className="innerMessage">
                                {
-                                profile?.about?.json?.content?.length > 0 && profile?.about?.json?.content?.map((data,key) => {
+                                profile?.about?.json?.content?.length > 0 && profile?.about?.json?.content?.map((data : any,key : number) => {
                                     return (
                                         <p key={key}>{data.content[0].value}</p>
                                         )
@@ -72,7 +72,7 @@ export default function About(){
                             }
                             <ul>
                             {
-                                profile?.techstack?.length > 0 && profile?.techstack?.map((data,key) => {
+                                profile?.techstack?.length > 0 && profile?.techstack?.map((data :string,key : number) => {
                                     return (
                                         <li key={key}> {data}</li>
                                         )

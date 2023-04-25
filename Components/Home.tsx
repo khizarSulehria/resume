@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import style from  '/styles/Home.module.css';
 
 export default function Home(){
-    const [profile, setProfile] = useState({});
+    const [profile, setProfile] : any = useState({});
 
 
 
     useEffect(() => {
-        console.log("kkaa");
         async function fetchData() {
             try {
             const response = await fetch(`https://graphql.contentful.com/content/v1/spaces/0scgrccnnjkw/`, {
