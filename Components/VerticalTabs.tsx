@@ -10,7 +10,7 @@ const VerticalTabs = ({ tabs } : any) => {
   return (
     <div className="row">
       <div className="col-md-3">
-        <div className="nav flex-column nav-pills tab-list" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div className="nav flex-column nav-pills tab-list" id="v-pills-tab" role="tablist" >
           {tabs.map((tab : any, index : number) => (
             <button
               key={index}

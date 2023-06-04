@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function LeftNav(){
     return (
-        <div orientation="left" className="side__StyledSideElement-sc-1duznzb-0 hOvuuP">
+        <div className="side__StyledSideElement-sc-1duznzb-0 hOvuuP">
         <ul className="social__StyledSocialList-anu6nt-0 dVLQAC fade-enter-done">
             <li>
                 <a href="https://github.com/khizarSulehria" aria-label="GitHub" target="_blank" rel="noreferrer">
