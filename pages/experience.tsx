@@ -13,7 +13,7 @@ export default function Experience(){
     const tabs = [
         {
           label: 'Arpatech',
-          content: <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span> Engineer</span><span class="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" class="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p class="range">May 2018 - Present</p><div><ul>
+          content: <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" aria-hidden="false" className="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span> Engineer</span><span className="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" className="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p className="range">May 2018 - Present</p><div><ul>
           <li>Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more</li>
           <li>Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements</li>
           <li>Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders</li>
@@ -22,7 +22,7 @@ export default function Experience(){
         },
         {
           label: 'Golpik',
-          content: <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span>02 Engineer</span><span class="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" class="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p class="range">May 2018 - Present</p><div><ul>
+          content: <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" aria-hidden="false" className="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span>02 Engineer</span><span className="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" className="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p className="range">May 2018 - Present</p><div><ul>
           <li>Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more</li>
           <li>Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements</li>
           <li>Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders</li>
@@ -31,7 +31,7 @@ export default function Experience(){
         },
         {
           label: 'Itsec',
-          content: <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span>Lead Engineer</span><span class="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" class="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p class="range">May 2018 - Present</p><div><ul>
+          content: <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" aria-hidden="false" className="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span>Lead Engineer</span><span className="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" className="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p className="range">May 2018 - Present</p><div><ul>
           <li>Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more</li>
           <li>Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements</li>
           <li>Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders</li>
