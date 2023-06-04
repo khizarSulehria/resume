@@ -23,7 +23,7 @@
 .mainHome p {
     margin: 20px 0px 0px;
     max-width: 540px;
-    color: #64ffda;
+   /* color: #64ffda; */
 }
 
 .emailLink {
@@ -44,4 +44,3 @@
     transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
   
 }
-

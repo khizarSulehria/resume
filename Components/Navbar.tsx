@@ -1,9 +1,11 @@
 import Link from "next/link"
+import LeftNav from "./LeftNav";
+import RightNav from "./RightNav";
 
 export default function Navbar(){
     return (
         
-
+        <>
         <header className="site-header">
             <nav className="navbar navbar-expand-lg site-nav">
                 <div className="container">
@@ -14,17 +16,18 @@ export default function Navbar(){
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ol className="navbar-nav ms-auto">
+                    <li className="nav-item">
+                        <Link className="nav-link" href="/">Home</Link>
+                    </li>
                     <li className="nav-item active">
                     <Link className="nav-link" href="/about">About</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#">Experince</Link>
+                    <Link className="nav-link" href="/experience">Experience</Link>
                     </li>
+
                     <li className="nav-item">
-                    <Link className="nav-link" href="#">Work</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" href="#">Contact</Link>
+                    <Link className="nav-link" href="/contact">Contact</Link>
                     </li>
                 </ol>
                 <form className="form-inline">
@@ -35,6 +38,10 @@ export default function Navbar(){
                 </div>
             </nav>
         </header>
+
+        <LeftNav />
+        <RightNav />
+        </>
         
       
     );

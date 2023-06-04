@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import style from  '/styles/Home.module.css';
+import { getContentFullProfileData } from '@/api';
+import ReactMarkdown from 'react-markdown'
 
 export default function Home(){
     const [profile, setProfile] : any = useState({});
@@ -9,31 +11,23 @@ export default function Home(){
     useEffect(() => {
         async function fetchData() {
             try {
-            const response = await fetch(`https://graphql.contentful.com/content/v1/spaces/0scgrccnnjkw/`, {
-                                method: "POST",
-                                headers: {
-                                "Content-Type": "application/json",
-                                Authorization: "Bearer EEgac6T4clmbr8a6euEneXbJdsm2bBYMca4nqWgaz1M",
-                                },
-                                // send the GraphQL query
-                                body: JSON.stringify({
-                                    query: `
-                                    query {
-                                        profile(id: "2d0tCTt9P3NSgQyRlYTLsb") {
-                                        sys {
-                                            id
-                                        }
-                                        name
-                                        defineProfile
-                                        shortIntro
-                                    }
-                                    }
-                                    `,
-                                })
-                            });
-                const json = await response.json();
+         
+
+                const json = await getContentFullProfileData({
+                    query: `
+                    query {
+                        profile(id: "2d0tCTt9P3NSgQyRlYTLsb") {
+                        sys {
+                            id
+                        }
+                        name
+                        defineProfile
+                        shortIntro
+                    }
+                    }
+                    `,
+                })
                 setProfile(json?.data?.profile);
-                console.log(json?.data?.profile)
             }catch (error) {
                 console.error(error);
             }
@@ -59,9 +53,8 @@ export default function Home(){
                             <span>{profile?.defineProfile}.</span>
                         </div>
                         <div>
-                        <p>
-                            {profile?.shortIntro}
-                        </p>
+                        <ReactMarkdown>{profile?.shortIntro}</ReactMarkdown>
+                        
                         </div>
                         <div className={`${style.emailLink}` }><a  href="https://brittanychiang.com/#about" target="_blank" rel="noreferrer">Check out my course!</a></div>
                     </section>

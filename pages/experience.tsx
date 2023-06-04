@@ -1,0 +1,96 @@
+import Image from 'next/image';
+import style from '/styles/Home.module.css';
+import Navbar from '@/Components/Navbar';
+import { useEffect, useState } from 'react';
+import { getContentFullProfileData } from '@/api/index';
+import Head from 'next/head';
+import Script from 'next/script';
+import VerticalTabs from '@/Components/VerticalTabs';
+
+export default function Experience(){
+    const [profile, setProfile] :any = useState({});
+
+    const tabs = [
+        {
+          label: 'Arpatech',
+          content: <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span> Engineer</span><span class="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" class="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p class="range">May 2018 - Present</p><div><ul>
+          <li>Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more</li>
+          <li>Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements</li>
+          <li>Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders</li>
+          <li>Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship</li>
+          </ul></div></div>,
+        },
+        {
+          label: 'Golpik',
+          content: <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span>02 Engineer</span><span class="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" class="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p class="range">May 2018 - Present</p><div><ul>
+          <li>Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more</li>
+          <li>Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements</li>
+          <li>Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders</li>
+          <li>Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship</li>
+          </ul></div></div>,
+        },
+        {
+          label: 'Itsec',
+          content: <div id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0" aria-hidden="false" class="jobs__StyledTabPanel-sc-59sdss-5 QgHxr"><h3><span>Lead Engineer</span><span class="company">&nbsp;@&nbsp;<a href="https://www.upstatement.com/" class="inline-link" rel="noopener noreferrer" target="_blank">Upstatement</a></span></h3><p class="range">May 2018 - Present</p><div><ul>
+          <li>Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more</li>
+          <li>Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements</li>
+          <li>Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders</li>
+          <li>Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship</li>
+          </ul></div></div>,
+        },
+      ];
+    useEffect(() => {
+        async function fetchData() {
+            try {
+            const json = await getContentFullProfileData({
+                                                query: `
+                                                query {
+                                                    profile(id: "2d0tCTt9P3NSgQyRlYTLsb") {
+                                                        sys {
+                                                        id
+                                                        }
+                                                        name
+                                                        defineProfile
+                                                        shortIntro
+                                                        about {
+                                                        json
+                                                        },
+                                                        image {
+                                                        url
+                                                        },
+                                                        techstack
+                                                    }
+                                                }
+                                                `,
+                                            });
+                setProfile(json?.data?.profile);
+            }catch (error) {
+                console.error(error);
+            }
+        }
+
+        fetchData();
+    },[])
+
+
+    return (
+        <>
+        
+        <Navbar />
+        <div className="main">
+            <div className="content">
+                <div className="container">
+                    <section className={style.mainHome}>
+                    <h2 className="numbered-heading">02. Where I’ve Worked</h2>
+                    <div className="container mt-5">
+                    <VerticalTabs tabs={tabs} />
+                    </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        </>
+       
+    )
+}
